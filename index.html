@@ -4,70 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AR/VR Takeaways - VAP Session</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #0077cc;
-        }
-        ul {
-            margin-left: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Takeaways from AR/VR VAP Session</h1>
+        <button id="theme-toggle">Toggle Theme</button>
+
         <h2>Understanding AR & VR</h2>
-        <p><strong>AR (Augmented Reality)</strong> overlays digital information onto the real world, while <strong>VR (Virtual Reality)</strong> creates a fully immersive simulated environment.</p>
+        <p><strong>Augmented Reality (AR)</strong> overlays digital elements (text, images, 3D objects) onto the real world. It enhances real-world environments by integrating virtual components, visible through devices like smartphones, tablets, and AR headsets.</p>
+        <p><strong>Virtual Reality (VR)</strong> creates a completely immersive digital experience where users can interact with a fully simulated environment using VR headsets like the Meta Quest.</p>
         
         <h2>Types of AR</h2>
         <h3>Marker-Based AR</h3>
+        <p>Marker-based AR requires a predefined visual marker, such as a QR code or a printed image, to trigger digital content. The camera scans the marker and overlays virtual objects onto it.</p>
         <ul>
-            <li>Uses QR codes or predefined patterns to trigger digital content.</li>
-            <li>Examples: AR-enabled books, toys, tattoos, and mobile skins.</li>
+            <li>Used in educational tools, books, and toys to enhance learning experiences.</li>
+            <li>Examples: Wall decals, toys, tattoos, encyclopedia books, action flashcards (e.g., HoloKitab from Shark Tank India), storybooks, and mobile skins.</li>
         </ul>
         
         <h3>Markerless AR</h3>
+        <p>Markerless AR does not require predefined markers. Instead, it uses technologies like SLAM (Simultaneous Localization and Mapping) to understand the environment and place virtual objects dynamically.</p>
         <ul>
-            <li>Uses SLAM (Simultaneous Localization and Mapping) to detect surroundings.</li>
-            <li>Examples: Pokémon GO, holograms, and real-world overlays.</li>
+            <li>Used in applications that require real-time interaction with surroundings.</li>
+            <li>Examples: Pokémon GO, real-life space overlays, and superimposed holograms.</li>
         </ul>
         
-        <h2>How to Experience AR</h2>
+        <h2>Ways to Experience AR</h2>
         <ul>
-            <li><strong>Web-Based AR</strong>: Access AR via a browser (WebAR).</li>
-            <li><strong>Mobile Apps</strong>: Apps like IKEA Place visualize objects in real-world spaces.</li>
-            <li><strong>Social Media AR</strong>: Platforms like SPARK AR (Meta), SNAP AR (Snapchat), and Effect House (TikTok) allow AR filter creation.</li>
+            <li><strong>Web-Based AR:</strong> AR experiences accessible directly via web browsers without requiring app installations.</li>
+            <li><strong>Mobile Apps:</strong> AR applications developed for Android and iOS, such as the IKEA Place app, which allows users to visualize furniture in their home.</li>
+            <li><strong>Social Media AR:</strong> Platforms enabling users to create and use AR effects, such as:
+                <ul>
+                    <li><strong>SPARK AR (Meta):</strong> Used for creating AR filters on Instagram and Facebook.</li>
+                    <li><strong>SNAP AR (Lens Studio 5.6.0):</strong> Snapchat’s AR creation tool for interactive effects.</li>
+                    <li><strong>Effect House (TikTok):</strong> Enables TikTok users to build custom AR experiences.</li>
+                </ul>
+            </li>
         </ul>
+        
+        <h2>IoT and AR Integration</h2>
+        <p>AR is being used to visualize IoT-enabled home appliances before purchasing or installation. Users can see how smart home devices like security systems, lighting, and thermostats will look and function in their space.</p>
         
         <h2>Hands-On Activities</h2>
+        <h3>A-Frame</h3>
+        <p>A-Frame is an open-source web framework built on Three.js, designed to make AR and VR development accessible through HTML-like syntax. It is widely used for creating immersive experiences without requiring extensive programming knowledge.</p>
+        <p><strong>Why A-Frame?</strong></p>
         <ul>
-            <li>Explored <strong>A-Frame</strong> for web-based AR/VR development.</li>
-            <li>Created a <strong>Leopard Face Filter</strong> using Lens Studio.</li>
-            <li>Installed and set up <strong>Blender</strong> for 3D modeling.</li>
-            <li>Created a <strong>Sketchfab</strong> account to explore 3D models.</li>
+            <li>Allows users to create AR/VR scenes using simple HTML elements.</li>
+            <li>Supports WebXR, making it compatible with both VR headsets and AR-enabled devices.</li>
+            <li>Can be used with AR.js for developing marker-based and markerless AR applications.</li>
+        </ul>
+        <p><strong>What We Did:</strong> We used A-Frame to create basic AR environments and experimented with marker-based tracking.</p>
+        
+        <h3>Snap AR (Lens Studio)</h3>
+        <p>Snap AR, powered by Lens Studio, is a powerful tool used to create AR filters (Lenses) for Snapchat. It enables creators to design interactive experiences with face tracking, body tracking, and world AR effects.</p>
+        <p><strong>Why Lens Studio?</strong></p>
+        <ul>
+            <li>Enables developers and designers to create interactive filters and effects.</li>
+            <li>Supports AI-powered facial recognition and 3D object placement.</li>
+            <li>Provides real-time preview and debugging for better development workflow.</li>
+        </ul>
+        <p><strong>What We Did:</strong> We created a custom Leopard Face Filter using Lens Studio’s face tracking features.</p>
+        
+        <h3>Other Activities</h3>
+        <ul>
+            <li>Downloaded and explored Blender for 3D modeling.</li>
+            <li>Created a Sketchfab account to browse and share 3D models.</li>
         </ul>
         
         <h2>VR Technologies</h2>
+        <p>VR immerses users in fully digital environments. The session covered different VR platforms and devices.</p>
         <ul>
-            <li><strong>Meta Quest 2 & 3</strong>: Standalone VR headsets for immersive experiences.</li>
-            <li><strong>Meta Horizon</strong>: Social VR platform by Meta.</li>
-            <li><strong>SideQuest</strong>: Allows installing and streaming custom VR apps on Meta Quest.</li>
+            <li><strong>Meta Quest 2 & 3:</strong> Standalone VR headsets by Meta, providing wireless VR experiences.</li>
+            <li><strong>Meta Horizon:</strong> A VR social platform where users can interact in a virtual space.</li>
+            <li><strong>SideQuest:</strong> A third-party tool that allows installing and streaming custom VR apps on Meta Quest.</li>
         </ul>
     </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
