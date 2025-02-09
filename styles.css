@@ -20,25 +20,66 @@ body {
 h1, h2, h3 {
     color: #007bff;
 }
+h1 {
+    text-align: center;
+}
 
-button {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 15px;
-    font-size: 16px;
+/* Toggle Switch Container */
+.theme-switch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Hide the default checkbox */
+#theme-toggle {
+    display: none;
+}
+
+/* Switch Design */
+.switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 30px;
+    background: #ddd;
+    border-radius: 30px;
     cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background: #007bff;
-    color: white;
+    transition: background 0.3s;
+}
+
+/* Switch Slider */
+.slider {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
     transition: 0.3s;
 }
 
-button:hover {
-    background: #0056b3;
+/* Icons */
+.icon {
+    position: absolute;
+    font-size: 18px;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Dark Theme */
+.sun {
+    left: 8px;
+    opacity: 1;
+}
+
+.moon {
+    right: 8px;
+    opacity: 0;
+}
+
+/* Dark Mode Styling */
 .dark-mode {
     background-color: #121212;
     color: #f8f9fa;
@@ -54,11 +95,20 @@ button:hover {
     color: #4db8ff;
 }
 
-.dark-mode button {
+/* Dark Mode Switch */
+.dark-mode .switch {
     background: #4db8ff;
-    color: #121212;
 }
 
-.dark-mode button:hover {
-    background: #007bff;
+.dark-mode .slider {
+    transform: translateX(30px);
+}
+
+/* Dark Mode Icon Change */
+.dark-mode .sun {
+    opacity: 0;
+}
+
+.dark-mode .moon {
+    opacity: 1;
 }
